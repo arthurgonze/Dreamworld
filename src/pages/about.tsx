@@ -2,6 +2,7 @@
 import React, { FunctionComponent } from 'react';
 import type { HeadFC, PageProps } from 'gatsby';
 import Layout from '../components/layout'
+import Seo from '../components/seo';
  
 const AboutPage: FunctionComponent<PageProps> = () => {
   return (
@@ -11,9 +12,7 @@ const AboutPage: FunctionComponent<PageProps> = () => {
   );
 };
  
-export const Head: HeadFC = () => {
-    return <title>About me</title>;
-};
+export const Head: HeadFC = () => <Seo title="About Me"/>
 
 // Step 3: Export your component
 export default AboutPage;
