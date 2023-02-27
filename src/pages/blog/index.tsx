@@ -1,15 +1,16 @@
 import React, { FunctionComponent } from 'react';
 import type { HeadFC, PageProps } from 'gatsby';
-import { graphql } from 'gatsby'
-import Layout from '../components/layout';
-import Seo from '../components/seo';
+import { graphql, Link } from 'gatsby'
+import Layout from '../../components/layout';
+import Seo from '../../components/seo';
 
 
 type NodeType = {
     id: KeyType,
     frontmatter:{
       title: string,
-      date: Date
+      date: Date,
+      slug: string
     },
     excerpt: string
 }
@@ -26,9 +27,12 @@ const BlogPage = ({data}:PageProps<DataType>) => {
       {
         data.allMdx.nodes.map((node) => (
           <article key={node.id}>
-            <h2>{node.frontmatter.title}</h2>
+            <h2>
+              <Link to={`/blog/${node.frontmatter.slug}`}>
+                {node.frontmatter.title}
+              </Link>
+            </h2>
             <p>Posted: {node.frontmatter.date}</p>
-            <p>{node.excerpt}</p>
           </article>
         ))
       }
@@ -43,9 +47,9 @@ export const query = graphql`
         frontmatter {
           date
           title
+          slug
         }
         id
-        excerpt
       }
     }
   }
