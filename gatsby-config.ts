@@ -3,7 +3,7 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Sonhar 2`,
+    title: `Dreamworld`,
     siteUrl: `https://www.yourdomain.tld`
   },
   
@@ -19,9 +19,10 @@ const config: GatsbyConfig = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: `blog`,
-        path: `${__dirname}/blog`,
+        path: `${__dirname}/blog/`,
       }
-    }
+    },
+    `gatsby-plugin-mdx`
   ],
   pathPrefix: "/Dreamworld"
 };

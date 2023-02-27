@@ -17,8 +17,10 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
+    "@mdx-js/react": "^2.3.0",
     "gatsby": "^5.7.0",
     "gatsby-plugin-image": "^3.7.0",
+    "gatsby-plugin-mdx": "^5.7.0",
     "gatsby-plugin-sass": "^6.7.0",
     "gatsby-plugin-sharp": "^5.7.0",
     "gatsby-source-filesystem": "^5.7.0",
