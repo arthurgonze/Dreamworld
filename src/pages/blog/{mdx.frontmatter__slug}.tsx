@@ -28,6 +28,12 @@ const BlogPost = ({ data, children }:PageProps<DataType>) => {
         image={image}
         alt={data.mdx.frontmatter.hero_image_alt}
       />
+      <p>
+        Photo Credit:{" "}
+        <a href={data.mdx.frontmatter.hero_image_credit_link}>
+          {data.mdx.frontmatter.hero_image_credit_text}
+        </a>
+      </p>
       {children}
     </Layout>
   )
