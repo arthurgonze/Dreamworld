@@ -1,4 +1,3 @@
-// Step 1: Import React
 import React, { FunctionComponent } from 'react';
 import type { HeadFC, PageProps } from 'gatsby';
 import Layout from '../components/layout'
@@ -14,6 +13,5 @@ const AboutPage: FunctionComponent<PageProps> = () => {
  
 export const Head: HeadFC = () => <Seo title="About Me"/>
 
-// Step 3: Export your component
 export default AboutPage;
  

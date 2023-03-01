@@ -26,6 +26,7 @@ const Layout: React.FC<LayoutProps> = ({ pageTitle, children }: LayoutProps) => 
           <li className={navLinkItem}><Link to="/" className={navLinkText}>Home</Link></li>
           <li className={navLinkItem}><Link to="/about" className={navLinkText}>About</Link></li>
           <li className={navLinkItem}><Link to="/blog" className={navLinkText}>Blog</Link></li>
+          <li className={navLinkItem}><Link to="/threejs_sandbox" className={navLinkText}>ThreeJS</Link></li>
         </ul>
       </nav>
       <main>

@@ -1,4 +1,5 @@
 import type { GatsbyConfig } from "gatsby";
+const path = require('path')
 
 
 const config: GatsbyConfig = {
@@ -12,8 +13,7 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
-    "gatsby-plugin-sass", 
-    "gatsby-plugin-image", 
+    "gatsby-plugin-image",
     "gatsby-plugin-sharp", 
     {
       resolve: "gatsby-source-filesystem",
@@ -22,8 +22,29 @@ const config: GatsbyConfig = {
         path: `${__dirname}/blog/`,
       }
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        start_url: `/`,
+        background_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `src/images/gatsby-icon.png`,
+      },
+    },
     `gatsby-plugin-mdx`,
-    "gatsby-transformer-sharp"
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sass",
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          "@components": path.resolve(__dirname, 'src/components'),
+          "@styles": path.resolve(__dirname, 'src/styles'),
+          "@images": path.resolve(__dirname, 'src/images'),
+          "@static": path.resolve(__dirname, 'src/static')
+        },
+      }
+    }
   ],
   pathPrefix: "/Dreamworld"
 };
