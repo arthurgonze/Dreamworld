@@ -2,7 +2,7 @@ import React from "react";
 import * as THREE from "three";
 import { Canvas, useLoader, extend } from "@react-three/fiber";
 import { Cloud, Edges, Effects, Sparkles, OrbitControls, OrthographicCamera  } from "@react-three/drei";
-import logo from "@images/gatsby-icon.png";
+import logo from "../images/gatsby-icon.png";
 
 import { UnrealBloomPass } from "three-stdlib";
 extend({ UnrealBloomPass })

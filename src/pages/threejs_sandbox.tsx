@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
-import CanvasAnimation from '@components/ThreeAnimation';
-import AboutMe from '@components/AboutMe';
-import Blog from '@components/Blog';
-import Contact from '@components/Contact';
+import CanvasAnimation from '../components/ThreeAnimation';
+import AboutMe from '../components/AboutMe';
+import Blog from '../components/Blog';
+import Contact from '../components/Contact';
 
 const ThreeJSSandboxPage = () => {
 
-  const [navSelected, setNavSelected] =useState(null);
+  const [navSelected, setNavSelected] = useState(null);
     return (
       <main>
-        <CanvasAnimation/>
+        {/* <CanvasAnimation/> */}
+        
         <div className="header">
             <h1>Portfolio</h1>
             <h3>By: Arthur</h3>
@@ -30,10 +31,9 @@ const ThreeJSSandboxPage = () => {
       </main>
     );
   };
-
-  export default ThreeJSSandboxPage;
    
   export const Head = () => <title>Gatsby - Portfolio page with Three.js</title>
+  export default ThreeJSSandboxPage;
   
 
    
