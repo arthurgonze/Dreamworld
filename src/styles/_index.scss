@@ -1,8 +1,10 @@
 // @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url('https://fonts.cdnfonts.com/css/verdana');
 
 // $mainFont: "Righteous", cursive;
-$mainFont: "Press Start 2P";
+$titlesFont: "Press Start 2P";
+$readingFont: 'Verdana', sans-serif;
 
 main {
     overflow: hidden;
@@ -34,7 +36,7 @@ main {
 
         h1{
             color: #fff;
-            font-family: $mainFont;
+            font-family: $titlesFont;
             font-size: 80px;
             margin-bottom: 0;
             text-shadow: 4px 4px rgb(39, 6, 253);
@@ -43,8 +45,19 @@ main {
         h3{
             margin-top: 24px;
             color: rgb(126, 124, 124);
-            font-family: $mainFont;
+            font-family: $titlesFont;
             font-size: 16px;
+        }
+
+        .Contact{
+            margin-top: 24px;
+            a{
+                .icon{
+                    height: 50px;
+                    width: 50px;
+                    margin-right: 10px;
+                }
+            }
         }
     }
 
@@ -60,7 +73,7 @@ main {
             border:none;
             background: none;
             color: #fff;
-            font-family: $mainFont;
+            font-family: $titlesFont;
             font-size: 48px;
             margin-right: 50px;
             text-shadow: 2px 2px rgb(39, 6, 253);
@@ -91,6 +104,7 @@ main {
         color:#fff;
         background-color: rgba($color: #000000, $alpha: 0.8);
         transition: 0.2s ease-in-out;
+        // font-family: $readingFont;
 
         &.show-content{
             height: 100vh;
@@ -115,22 +129,49 @@ main {
             overflow: hidden;
             opacity: 0;
             transition: 0.2s 0.25 ease-in-out;
-            
 
             .scroll {
+                padding-top: 50px;
+                font-family: $readingFont;
                 display: block;
                 height: 100%;
                 overflow-y: auto;
+
+                a:link {
+                    color: violet;
+                    background-color: transparent;
+                    text-decoration: none;
+                }
+                
+                a:visited {
+                color: rgb(255, 0, 187);
+                background-color: transparent;
+                text-decoration: none;
+                }
+                
+                a:hover {
+                color: red;
+                background-color: transparent;
+                text-decoration: underline;
+                }
+                
+                a:active {
+                color: yellow;
+                background-color: transparent;
+                text-decoration: underline;
+                }
             }
 
-            // .h1{
-            //     font-family: $mainFont;
-            //     text-shadow: 2px 2px rgb(39, 6, 253);
-            // }
-
             .content-title{
-                font-family: $mainFont;
+                font-family: $titlesFont;
                 text-shadow: 2px 2px rgb(39, 6, 253);
+
+                h3{
+                    margin-top: 24px;
+                    color: rgb(126, 124, 124);
+                    font-family: $titlesFont;
+                    font-size: 14px;
+                }
             }
 
             .close-btn {
@@ -140,7 +181,7 @@ main {
                 border: none;
                 background: none;
                 color: rgb(255, 0, 187);
-                font-family: $mainFont;
+                font-family: $titlesFont;
                 font-size: 24px;
                 cursor: pointer;
                 opacity: 0.8;

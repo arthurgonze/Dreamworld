@@ -8,13 +8,14 @@ const ThreeLazy = () => {
   useEffect(() => {setIsMounted(true);}, []);
 
   return (
-    <>
-        {!isMounted || navigator?.connection?.saveData || !matchMedia('(min-width: 768px)').matches ? null : (
+    <div>
+        {!isMounted ? null : (
+        // {!isMounted || navigator?.connection?.saveData || !matchMedia('(min-width: 768px)').matches ? null : (
             <Suspense fallback={null}>
-            <ThreeCanvas />
+                <ThreeCanvas />
             </Suspense>
         )}
-    </>
+    </div>
   );
 };
 

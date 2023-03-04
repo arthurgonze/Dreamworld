@@ -9,7 +9,7 @@ const ThreeJSSandboxPage = () => {
   const [navSelected, setNavSelected] = useState(null);
     return (
       <main>
-        <CanvasAnimation/>
+        {/* <CanvasAnimation/> */}
         
         <div className="header">
             <h1>Portfolio</h1>
