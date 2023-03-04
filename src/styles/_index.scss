@@ -1,6 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
-$righteous: "Righteous", cursive;
+// $mainFont: "Righteous", cursive;
+$mainFont: "Press Start 2P";
 
 main {
     overflow: hidden;
@@ -32,15 +34,17 @@ main {
 
         h1{
             color: #fff;
-            font-family: $righteous;
-            font-size: 95px;
+            font-family: $mainFont;
+            font-size: 80px;
             margin-bottom: 0;
             text-shadow: 4px 4px rgb(39, 6, 253);
         }
 
         h3{
+            margin-top: 24px;
             color: rgb(126, 124, 124);
-            font-size: 40px;
+            font-family: $mainFont;
+            font-size: 16px;
         }
     }
 
@@ -56,8 +60,8 @@ main {
             border:none;
             background: none;
             color: #fff;
-            font-family: $righteous;
-            font-size: 50px;
+            font-family: $mainFont;
+            font-size: 48px;
             margin-right: 50px;
             text-shadow: 2px 2px rgb(39, 6, 253);
             cursor: pointer;
@@ -111,6 +115,7 @@ main {
             overflow: hidden;
             opacity: 0;
             transition: 0.2s 0.25 ease-in-out;
+            
 
             .scroll {
                 display: block;
@@ -118,8 +123,13 @@ main {
                 overflow-y: auto;
             }
 
-            .h1{
-                font-family: $righteous;
+            // .h1{
+            //     font-family: $mainFont;
+            //     text-shadow: 2px 2px rgb(39, 6, 253);
+            // }
+
+            .content-title{
+                font-family: $mainFont;
                 text-shadow: 2px 2px rgb(39, 6, 253);
             }
 
@@ -130,7 +140,8 @@ main {
                 border: none;
                 background: none;
                 color: rgb(255, 0, 187);
-                font-size: 20px;
+                font-family: $mainFont;
+                font-size: 24px;
                 cursor: pointer;
                 opacity: 0.8;
                 transition: 0.2s ease-in-out;
@@ -148,11 +159,11 @@ main {
             padding: 20px 20px;
     
             h1{
-                font-size: 50px;
+                font-size: 48px;
             }
     
             h3{
-                font-size: 20px;
+                font-size: 24px;
             }
         }
 
@@ -160,7 +171,7 @@ main {
             flex-direction: column;
             top: 75vh;
             button {
-                font-size: 30px;
+                font-size: 32px;
                 margin-right: 0;
                 margin-bottom: 10px;
             }

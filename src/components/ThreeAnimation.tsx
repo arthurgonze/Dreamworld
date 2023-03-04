@@ -1,20 +1,21 @@
 import React from "react";
 import * as THREE from "three";
 import { Canvas, useLoader, extend } from "@react-three/fiber";
-import { Cloud, Edges, Effects, Sparkles, OrbitControls, OrthographicCamera  } from "@react-three/drei";
+import { Cloud, Edges, Effects, Sparkles, OrbitControls, OrthographicCamera} from "@react-three/drei";
 import logo from "../images/gatsby-icon.png";
 
 import { UnrealBloomPass } from "three-stdlib";
 extend({ UnrealBloomPass })
 
-
 const CanvasAnimation = () =>{
     const repeatX = 1;
     const repeatY = 1;
+    
     const base = useLoader(THREE.TextureLoader, logo);
     base.wrapS = THREE.RepeatWrapping;
     base.wrapT = THREE.RepeatWrapping;
     base.repeat.set(repeatX, repeatY);
+
     return(
         <Canvas shadows gl={{antialias:false}}>
             <color attach="background" args={["#202030"]} />
@@ -31,8 +32,6 @@ const CanvasAnimation = () =>{
             <OrbitControls autoRotate enableZoom={false}/>
             <OrthographicCamera makeDefault far={500} near={0.1} position={[-10, 2, -10]} zoom={100}/>
             <hemisphereLight intensity={1} color="red" groundColor={"blue"}/>
-            {/* <hemisphereLight intensity={1} color="green" groundColor={"purple"}/> */}
-            {/* <hemisphereLight intensity={1} color="white" groundColor={"white"}/> */}
             <Sparkles count={200} scale={[20, 20, 20]} size={1} speed={0.01}/>
             <fog attach={"fog"} args={["#202030", 5, 25]}/>
             <Cloud
@@ -50,3 +49,5 @@ const CanvasAnimation = () =>{
 }
 
 export default CanvasAnimation
+
+
