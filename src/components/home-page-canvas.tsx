@@ -4,7 +4,7 @@ import { Canvas } from '@react-three/fiber';
 
 import ThreeStars from './three-stars';
 
-const ThreeCanvas = ({ className }) => {
+const HomePageCanvas = ({ className }) => {
   return (
     <Canvas
       gl={{ antialias: false, alpha: false }}
@@ -18,4 +18,4 @@ const ThreeCanvas = ({ className }) => {
   );
 };
 
-export default ThreeCanvas;
+export default HomePageCanvas;

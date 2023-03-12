@@ -1,20 +1,18 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import type { HeadFC, PageProps } from 'gatsby';
 import { graphql, Link } from 'gatsby'
 import Layout from '../../components/layout';
 import Seo from '../../components/seo';
-import Card from '../../components/card';
+
 
 type NodeType = {
     id: KeyType,
-    excerpt: string,
     frontmatter:{
       title: string,
       date: Date,
-      slug: string,
-      thumbnail_image: ImageDataLike,
-      thumbnail_alt: string
-    }
+      slug: string
+    },
+    excerpt: string
 }
 
 type DataType = {
@@ -24,12 +22,19 @@ type DataType = {
 }
 
 const BlogPage = ({data}:PageProps<DataType>) => {
-  const phrase = "\"It\'s Dangerous To Go Alone! Take This\"";
+  const phrase = "\"Can\'t say I've ever been too fond of beginnings, myself. Messy little things. Give me a good ending anytime. You know where you are with an ending.\"- Neil Gaiman"
   return (
-    <Layout pageTitle="Blog" quote={phrase}>
+    <Layout pageTitle="Projects" quote={phrase}>
       {
         data.allMdx.nodes.map((node) => (
-          <Card card_node={node}/>
+          <article key={node.id}>
+            <h2>
+              <Link to={`/blog/${node.frontmatter.slug}`}>
+                {node.frontmatter.title}
+              </Link>
+            </h2>
+            <p>Posted: {node.frontmatter.date}</p>
+          </article>
         ))
       }
     </Layout>
@@ -40,18 +45,12 @@ export const query = graphql`
   query {
     allMdx(sort: {frontmatter: {date: DESC}}) {
       nodes {
-        id
         frontmatter {
-          title
           date
+          title
           slug
-          thumbnail_image {
-            childImageSharp {
-              gatsbyImageData
-            }
-          }
-          thumbnail_alt
         }
+        id
       }
     }
   }

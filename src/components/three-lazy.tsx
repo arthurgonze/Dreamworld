@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Suspense, lazy } from 'react';
 
-const ThreeCanvas = lazy(() => import('./three-canvas'));
+const HomePageCanvas = lazy(() => import('./home-page-canvas'));
 
 const ThreeLazy = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -12,7 +12,7 @@ const ThreeLazy = () => {
         {!isMounted ? null : (
         // {!isMounted || navigator?.connection?.saveData || !matchMedia('(min-width: 768px)').matches ? null : (
             <Suspense fallback={null}>
-                <ThreeCanvas />
+                <HomePageCanvas />
             </Suspense>
         )}
     </div>

@@ -20,9 +20,9 @@ type DataType = {
 
 const BlogPost = ({ data, children }:PageProps<DataType>) => {
   const image = getImage(data.mdx.frontmatter.hero_image)
-
+  const phrase = "\"It\'s Dangerous To Go Alone! Take This\"";
   return (
-    <Layout pageTitle={data.mdx.frontmatter.title}>
+    <Layout pageTitle={"Blog"} quote={phrase}>
       <p>{data.mdx.frontmatter.date}</p>
       <GatsbyImage
         image={image}
