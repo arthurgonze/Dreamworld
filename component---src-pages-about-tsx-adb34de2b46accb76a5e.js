@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkdreamworld=self.webpackChunkdreamworld||[]).push([[49],{2766:function(e,t,l){l.r(t),l.d(t,{Head:function(){return a}});var n=l(7294),r=l(1883);const a=()=>n.createElement("title",null,"About me");t.default=()=>n.createElement("main",null,n.createElement("h1",null,"About me page"),n.createElement("p",null,"Hi there! I'm the proud creator of this site, which I built with Gatsby."),n.createElement(r.rU,{to:"/public/index.html"},"Go to the main page"))}}]);
-//# sourceMappingURL=component---src-pages-about-tsx-adb34de2b46accb76a5e.js.map

@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkdreamworld=self.webpackChunkdreamworld||[]).push([[691],{7200:function(e,t,r){r.r(t),r.d(t,{Head:function(){return o}});var l=r(7294),a=r(4001),n=r(8567);const o=()=>l.createElement(a.Z,{title:"Dreamworld"});t.default=()=>l.createElement(n.Z,{pageTitle:"Home",quote:'"Would you kindly" explore this site?'})}}]);
+//# sourceMappingURL=component---src-pages-index-tsx-d635485461bc52c00e9b.js.map

@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkdreamworld=self.webpackChunkdreamworld||[]).push([[691],{7200:function(e,t,l){l.r(t),l.d(t,{Head:function(){return a}});var n=l(7294),r=l(1883);const a=()=>n.createElement("title",null,"Home Page");t.default=()=>n.createElement("main",null,n.createElement("h1",null,"Hello world!"),n.createElement(r.rU,{to:"/about"},"About Me"))}}]);
-//# sourceMappingURL=component---src-pages-index-tsx-20be80415f4ff1a423e9.js.map
