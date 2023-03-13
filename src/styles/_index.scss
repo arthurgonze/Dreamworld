@@ -324,7 +324,7 @@ main {
                 padding-bottom: 0;
             }
 
-            .BlogPostCard{
+            .Card{
                 display: flex;
                 width: 90%;
                 height: 90%;
@@ -344,14 +344,7 @@ main {
                     
                 }
 
-                .BlogPostThumbnailImage{
-                    display: flex;
-                    width: 30%;
-                    height: 100%;
-                    margin: 0;
-                }
-
-                .BlogPostTitle{
+                .CardTitle{
                     width: 70%;
                     height: 30%;
                     // margin: 0;
@@ -371,7 +364,7 @@ main {
                     
                 }
                 
-                .BlogPostDate{
+                .CardDate{
                     height: 10%;
                     width: 30%;
                     // margin: 0;

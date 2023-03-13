@@ -4,6 +4,7 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../../components/layout';
 import Seo from '../../components/seo';
 import Card from '../../components/card';
+import { ImageDataLike } from 'gatsby-plugin-image';
 
 type NodeType = {
     id: KeyType,
@@ -12,6 +13,7 @@ type NodeType = {
       title: string,
       date: Date,
       slug: string,
+      folder: string,
       thumbnail_image: ImageDataLike,
       thumbnail_alt: string
     }
@@ -38,19 +40,17 @@ const BlogPage = ({data}:PageProps<DataType>) => {
 
 export const query = graphql`
   query {
-    allMdx(sort: {frontmatter: {date: DESC}}) {
+    allMdx(
+      sort: {frontmatter: {date: DESC}}
+      filter: {frontmatter: {folder: {eq: "blog"}}}
+    ) {
       nodes {
         id
         frontmatter {
           title
           date
           slug
-          thumbnail_image {
-            childImageSharp {
-              gatsbyImageData
-            }
-          }
-          thumbnail_alt
+          folder
         }
       }
     }

@@ -51,13 +51,6 @@ const Layout: React.FC<LayoutProps> = ({ pageTitle, quote, children }: LayoutPro
           <button onClick={() => {navigate("/projects")}}> Projects </button>
           <button onClick={() => {navigate("/blog")}}> Blog </button>
         </div>
-
-        {/* <div className={`content-holder ${navSelected ? "show-content" : ""}`}>
-          <div className='content-main'>
-            <button className='close-btn' onClick={() => setNavSelected(null)}>CLOSE</button>
-            {navSelected}
-          </div>
-        </div> */}
       </main>
   );
 };

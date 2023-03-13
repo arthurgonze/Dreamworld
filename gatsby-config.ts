@@ -23,6 +23,13 @@ const config: GatsbyConfig = {
       }
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `projects`,
+        path: `${__dirname}/projects/`,
+      }
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         start_url: `/`,
