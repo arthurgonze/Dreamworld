@@ -10,7 +10,6 @@ const ThreeLazy = () => {
   return (
     <div>
         {!isMounted ? null : (
-        // {!isMounted || navigator?.connection?.saveData || !matchMedia('(min-width: 768px)').matches ? null : (
             <Suspense fallback={null}>
                 <HomePageCanvas />
             </Suspense>

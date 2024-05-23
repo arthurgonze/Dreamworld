@@ -27,35 +27,24 @@ const AboutMe = ({data}:PageProps<DataType>) => {
     <Layout pageTitle="About Me" quote={phrase}>
       {
         <div className="scroll">
-            <p>
-                Hello there! It's-a me, Arthur.
-            </p>
-            
-            <p>
-                I am currently finishing my Computer Science Master's degree at a Federal University here in Brazil. 
-                My main research area is Computer Graphics, but my research subject is Computational Fluid Dynamics.  
-                I'm currently looking for a computer graphics developer job in the game or animation industry.
-            </p>
-            
-            <p>
-                In my academic career, I have worked on multiple game development and computer graphics-related projects in collaboration with different departments and institutions. 
-                One of my main accomplishments was being selected as a research apprenticeship scholarship at the 
-                National Laboratory for Scientific Computing <a href="https://www.gov.br/lncc/pt-br" target="_blank"> (LNCC) </a> 
-                in collaboration with my University <a href="https://www2.ufjf.br/ufjf/" target="_blank"> (UFJF) </a> 
-                and funded by the National Council for Scientific and Technological Development <a href="https://www.gov.br/cnpq/pt-br" target="_blank"> (CNPq)</a>. 
-                On working on those projects I’ve always been part of a diverse background team of students and doctorate researchers. 
-                During this time I’ve developed proficiencies in the complexities of scientific research, code designing, and programming while also enhancing a solid math background. 
-                Along with that, I've learned and implemented new technologies such as machine learning algorithms, and virtual and augmented reality for web and mobile systems.
-            </p>
+            <h2 className='h2-first-line'> Hello there! It’s-a me, Arthur. </h2>
 
-            <p>
-                Beyond my academic background, I’ve worked as an indie game developer. 
-                During this journey, I've completed all projects well within project times and ensured quality standards were consistently met.  
-                One of my main accomplishments as an indie game dev was publishing a game on the Nintendo Switch platform. 
-                I have always been involved in various gaming systems that went beyond programming. 
-                I’ve taken part in designing gameplay features, mechanics, UI, scenario construction, and sound using Unreal or Unity game engines. 
-                Also, I've developed tools to help the designers and artists bring life and fun to the game.
-            </p>
+            <p> Academic wise, I hold a Master’s degree in Computer Science with a specialization in Computer Graphics 
+              and my main research topic is Computational Fluid Dynamics. Currently, I'm working at DNEG. I serve as a generalist on the Realtime 
+              technologies team, focusing on creating both linear and realtime content with Unreal 
+              Engine, with a particular inclination towards tech-art tasks. </p>
+
+            <p> My academic career has been marked by involvement in diverse game development and 
+              computer graphics projects, leading to a research apprenticeship scholarship at the 
+              National Laboratory for Scientific Computing (pt-br: LNCC), in partnership with the Federal 
+              University of Juiz de Fora (pt-br: UFJF) and supported by the National Council for Scientific 
+              and Technological Development (pt-br: CNPq). </p>
+
+            <p> As a generalist in the gaming industry, I’ve always embraced a wide range of 
+              responsibilities within the game engine. During my time as an indie game developer, 
+              I handled all the necessary tasks within the engine, while my colleagues focused on 
+              game design, art creation, and narrative development—everything that brings a game to 
+              life outside the engine. </p>
         </div>
       }
     </Layout>

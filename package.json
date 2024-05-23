@@ -17,9 +17,11 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
+    "@gatsbyjs/reach-router": "^2.0.1",
     "@mdx-js/react": "^2.3.0",
     "@react-three/drei": "^9.56.28",
     "@react-three/fiber": "^8.11.5",
+    "@types/react-router-dom": "^5.3.3",
     "gatsby": "^5.7.0",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-image": "^3.7.0",

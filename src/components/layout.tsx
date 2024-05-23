@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import {  navigate, useStaticQuery, graphql } from 'gatsby';
+import {  navigate, useStaticQuery, graphql} from 'gatsby';
+import { useLocation } from '@reach/router';
+// import { useLocation } from 'react-router-dom';
+// import { useLocation } from '@gatsbyjs/reach-router';
 import ThreeLazy from '../components/three-lazy';
 import { StaticImage } from 'gatsby-plugin-image';
-import resume from '../documents/Arthur_Dreamworld_CV.pdf'
  
 
 
@@ -23,34 +25,43 @@ const Layout: React.FC<LayoutProps> = ({ pageTitle, quote, children }: LayoutPro
     }
   `)
   const [navSelected, setNavSelected] = useState(null);
+  const location = useLocation();
+  
+  // Define the paths where the page-content should be displayed
+  const displayPaths = ['/projects/', '/about/', '/contact/'];
+  // console.log('path: %s', location.pathname);
+  // console.log('includes path? ', displayPaths.includes(location.pathname));
   return (
-    <main>
-        <div className="ThreeJSAnimation">
-          <ThreeLazy />
-        </div>
-        
-        <div className="header">
-            <h1> Dreamworld </h1>
-            <h2> {pageTitle} </h2>
-            <h3> {quote} </h3>
-            <div className="Contact">
-              <a href={resume} download="Arthur_Dreamworld_CV"><StaticImage alt="resume icon" src="../images/cv.png" className='icon'/></a>
-              <a href="https://github.com/arthurgonze" target="_blank"><StaticImage alt="GitHub icon" src="../images/github.png" className='icon'/></a>
-              <a href="https://www.linkedin.com/in/arthur-gonze-machado-890715177/" target="_blank"><StaticImage alt="Linkedin icon" src="../images/linkedin.png" className='icon'/></a>
-              <a href='mailto:arthurgonze@gmail.com'><StaticImage alt="e-mail icon" src="../images/email.png" className='icon'/></a>
+    <main className='main-section'>
+        <div className="container">
+          <header className='portfolio-header'>
+            <div className='header-content'>
+              <div className='header-texts'>
+                <button className="title-button" onClick={ ()=> {navigate("/")}}>
+                      <h1 className='header-title'>Arthur Gonze Machado </h1>
+                </button>
+                <h3 className='header-quote'> {quote} </h3>
+              </div>
+              <nav className='nav-buttons'>
+                <button className="button" onClick={() => 
+                  {navigate("/projects")}}>Projects</button>
+                <button className="button" onClick={() => 
+                  {navigate("/about")}}>About</button>
+                <button className="button" onClick={() => 
+                  {navigate("/contact")}}>Contact</button>
+              </nav>
             </div>
+          </header>
         </div>
-
-        <div className="page-content">
-          {children}
+        <div className='three-anim'>
+          <ThreeLazy/>
         </div>
-
-        <div className="navigation">
-          <button onClick={() => {navigate("/")}}> Home </button>
-          <button onClick={() => {navigate("/about")}}> About </button>
-          <button onClick={() => {navigate("/projects")}}> Projects </button>
-          <button onClick={() => {navigate("/blog")}}> Blog </button>
-        </div>
+        {/* <div className="page-content"> 
+          {children} 
+        </div> */}
+        {displayPaths.includes(location.pathname) && (
+          <div className="page-content"> {children} </div>
+        )}
       </main>
   );
 };

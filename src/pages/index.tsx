@@ -6,7 +6,8 @@ import Layout from '../components/layout';
 
 const IndexPage: FunctionComponent<PageProps> = () => {
     return (
-      <Layout pageTitle="Home" quote='"Would you kindly" explore this site?'>
+      <Layout pageTitle="Home" 
+      quote='"Would you kindly" explore this site?'>
       </Layout>
     );
   };
